@@ -33,3 +33,4 @@ briefs/YYYY/MM/YYYY-MM-DD.md
 5. 一段趋势深度解读
 
 仓库由自动任务每日更新。
+<!-- Trigger initial Pages deployment. -->
