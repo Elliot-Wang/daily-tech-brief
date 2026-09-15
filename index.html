@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="每日 AI、科技产业与金融市场简报" />
+  <title>Daily Tech Brief</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div id="progress" class="progress"></div>
+  <div class="shell">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">DT</div>
+        <div>
+          <div class="brand-title">Daily Tech Brief</div>
+          <div class="brand-subtitle">AI · 科技 · 市场</div>
+        </div>
+      </div>
+
+      <label class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="archiveSearch" type="search" placeholder="筛选日期…" autocomplete="off" />
+      </label>
+
+      <div class="archive-head">
+        <span>归档</span>
+        <span id="archiveCount" class="muted"></span>
+      </div>
+      <nav id="archive" class="archive" aria-label="每日简报归档"></nav>
+
+      <div class="sidebar-footer">
+        <a href="https://github.com/Elliot-Wang/daily-tech-brief" target="_blank" rel="noreferrer">GitHub Repository ↗</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuButton" class="icon-button mobile-only" aria-label="打开归档">☰</button>
+        <div class="topbar-spacer"></div>
+        <button id="latestButton" class="text-button">最新一期</button>
+        <a id="sourceLink" class="text-button" target="_blank" rel="noreferrer">查看 Markdown ↗</a>
+        <button id="themeButton" class="icon-button" aria-label="切换主题">◐</button>
+      </header>
+
+      <section class="reader">
+        <div id="status" class="status-card">正在载入简报…</div>
+        <article id="article" class="article" hidden></article>
+        <nav id="pager" class="pager" hidden>
+          <button id="newerButton" class="pager-button"></button>
+          <button id="olderButton" class="pager-button"></button>
+        </nav>
+      </section>
+    </main>
+  </div>
+  <div id="backdrop" class="backdrop"></div>
+</body>
+</html>
